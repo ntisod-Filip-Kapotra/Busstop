@@ -10,16 +10,7 @@ app = Flask(__name__)
 @app.route('/')
 def hello_world():
 
-    return render_template("index.html", departures=trains(9521), departures2=buses(9521))
-
-#hack för att hitta sitid
-@app.route('/sites')
-def sitessearch():
-
-    sitelist = sites(("Sodertalje hamn"))
-
-    return    str(sitelist)
-
+    return render_template("index.html", departures=trains(9521), departures2=buses(7571))
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug="True")

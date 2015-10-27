@@ -6,21 +6,69 @@
     <link rel="stylesheet"  href="{{  url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <div class="ruta" id="1">
-        <h2>Bussar - Balticvägen</h2>
-        <ul>
-            {% for departure in departures2 %}
-            <li>{{departure}}</li>
-            {% endfor %}
-        </ul>
+    <div id="first">
+        <table>
+            <thead>
+            <h2 id="lefth2">Pendeltåg - Södertälje Hamn</h2>
+                <tr>
+                    <th>Tidtabell</th>
+                    <th>Realtid</th>
+                    <th>Linje</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="center">
+                        {%  for departure in departures %}
+                            {{departure['ExpectedDateTime'] }}<br>
+                        {% endfor %}
+                    </td>
+                    <td class="right">
+                        {%  for departure in departures %}
+                            {{departure['DisplayTime'] }}<br>
+                        {% endfor %}
+                    </td>
+					<td>
+                        {%  for departure in departures %}
+                            {{departure['LineNumber'] }}
+                            {{departure['Destination'] }}<br>
+                        {% endfor %}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-    <div class="ruta" id="2">
-        <h2>Pendeltåg - Södertälje Hamn</h2>
-        <ul>
-            {% for departure in departures %}
-            <li>{{departure}}</li>
-            {% endfor %}
-        </ul>
+    <div id="second">
+        <table>
+            <thead>
+            <h2 id="righth2">Bussar - Balticvägen</h2>
+                <tr>
+                    <th>Tidtabell</th>
+                    <th>Realtid</th>
+                    <th>Linje</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="center">
+                        {%  for departure in departures2 %}
+                            {{departure['ExpectedDateTime'] }}<br>
+                        {% endfor %}
+                    </td>
+                    <td class="right">
+                        {%  for departure in departures2 %}
+                            {{departure['DisplayTime'] }}<br>
+                        {% endfor %}
+                    </td>
+					<td>
+                        {%  for departure in departures2 %}
+                            {{departure['LineNumber'] }}
+                            {{departure['Destination'] }}<br>
+                        {% endfor %}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </body>
 </html>

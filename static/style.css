@@ -1,24 +1,58 @@
 body {
     margin: 0;
     padding: 0;
+    background-image: url("ubuntu.jpg");
+    background-size: cover;
+    color: #FFF;
+    text-shadow: 2px 2px #000;
 }
 
-.ruta {
-    width: 600px;
-    height: 300px;
-    border-bottom: 1px solid;
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    border-collapse: collapse;
-    border-style: solid;
-    border-width: 1px;
-}
-
-#1 {
+#first {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 15px;
+    padding-bottom: 15px;
     float: left;
+    display: inline-block;
+    background-color: #808080;
+    background-color: rgba(128, 128, 128, 0.5);
+    border-bottom-right-radius: 25px;
 }
 
-#2 {
+#second {
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 15px;
+    padding-bottom: 15px;
     float: right;
+    display: inline-block;
+    background-color: #808080;
+    background-color: rgba(128, 128, 128, 0.5);
+    border-bottom-left-radius: 25px;
+}
+
+#lefth2 {
+    margin-left: 0px;
+}
+
+#righth2 {
+    margin-right: 0px;
+}
+
+td {
+    padding: 0px;
+    padding-right: 5px;
+}
+
+th {
+    padding: 0px;
+    padding-right: 5px;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
 }

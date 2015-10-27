@@ -24,9 +24,19 @@ def departures(siteid):
 
 
 def trains(siteid):
-    trainlist=[]
-    return   departures(siteid)['Trains']
+    trainlist=departures(siteid)['Trains']
+
+    for train in trainlist:
+        train["ExpectedDateTime"] = train["ExpectedDateTime"].split("T")[1][:5]
+
+    return  trainlist
 
 def buses(siteid):
-    buslist=[]
-    return   departures(siteid)['Buses']
+    buslist=departures(siteid)['Buses']
+
+    for bus in buslist:
+        bus["ExpectedDateTime"] = bus["ExpectedDateTime"].split("T")[1][:5]
+
+    return   buslist
+
+
